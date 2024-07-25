@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const precioTotalElemento = document.getElementById('precioTotal');
     const botonVaciar = document.getElementById('vaciarCarrito');
     const botonComprar = document.getElementById('comprar');
-    const botonVolver = document.getElementById('volver'); // Seleccionar el botón "Volver"
+    const botonVolver = document.getElementById('volver'); 
 
     const cargarItemsCarrito = () => {
         const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }).then((result) => {
             if (result.isConfirmed) {
-                // Generar número de pedido aleatorio de 4 dígitos
                 const numeroPedido = Math.floor(1000 + Math.random() * 9000);
                 Swal.fire({
                     title: 'Compra realizada!',
@@ -70,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     confirmButtonText: 'Aceptar'
                 });
 
-                // Limpiar carrito y actualizar la vista
                 localStorage.removeItem('carrito');
                 cargarItemsCarrito();
             }
@@ -78,12 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const volverAlInicio = () => {
-        window.location.href = 'index.html'; // Redirige a index.html
+        window.location.href = 'index.html'; 
     };
 
     botonVaciar.addEventListener('click', vaciarCarrito);
     botonComprar.addEventListener('click', comprar);
-    botonVolver.addEventListener('click', volverAlInicio); // Asigna el evento al botón "Volver"
+    botonVolver.addEventListener('click', volverAlInicio); 
 
     cargarItemsCarrito();
 });

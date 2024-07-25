@@ -117,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         precioTotalElemento.textContent = `Total: $${precioTotal}`;
 
-        // Actualizar contador en el menú
         const carritoCantidad = document.getElementById('carritoCantidad');
         if (carritoCantidad) {
             carritoCantidad.textContent = cantidadTotal;

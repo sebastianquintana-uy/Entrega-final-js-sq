@@ -1,0 +1,38 @@
+[
+    { 
+        "nombre": "Amoladroa Gris 800w", 
+        "codigo": "001", 
+        "precio": "1100", 
+        "imagenUrl": "medios/210.jpg" 
+    },
+    {   
+        "nombre": "Taladro a Bateria",
+        "codigo": "002", 
+        "precio": "2200", 
+        "imagenUrl": "medios/803.jpg" 
+    },
+    { 
+        "nombre": "Amoladora Naranja 1200w",
+        "codigo": "003", 
+        "precio": "3300", 
+        "imagenUrl": "medios/1806.jpg" 
+    },
+    { 
+        "nombre": "Lijadora Gris 850w", 
+        "codigo": "004", 
+        "precio": "4400", 
+        "imagenUrl": "medios/2350.jpg" 
+    },
+    { 
+        "nombre": "Lijadora de Banco 800w", 
+        "codigo": "005", 
+        "precio": "5500", 
+        "imagenUrl": "medios/3197.jpg" 
+    },
+    { 
+        "nombre": "Rotomartillo Amarillo 3000w", 
+        "codigo": "006", 
+        "precio": "6600", 
+        "imagenUrl": "medios/5211.jpg"
+    }
+]

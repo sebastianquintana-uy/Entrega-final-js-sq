@@ -35,6 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+
+
+    
     const comprar = () => {
         Swal.fire({
             title: 'Completa tus datos',

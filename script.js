@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span id="carritoCantidad" class="carrito-cantidad">0</span>
                 `;
             } else {
-                link.href = `#${item.toLowerCase()}`;
+                link.href = 'index.html';
                 link.textContent = item;
             }
 

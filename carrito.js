@@ -1,4 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    try {
+        const tituloPrincipal = document.getElementById('tituloPrincipal');
+        if (!tituloPrincipal) throw new Error(' "tituloPrincipal" no encontrado.');
+        tituloPrincipal.innerHTML = '<img src="medios/logo.png" class="logo">';
+
+    } catch (error) {
+        console.error('Error al agregar título:', error);
+    }
+
+    try {
+        const subtitulo = document.createElement('h2');
+        subtitulo.textContent = 'Mi Carrito';
+        const subtituloContainer = document.getElementById('subtitulo');
+        if (!subtituloContainer) throw new Error(' "subtitulo" no encontrado.');
+        subtituloContainer.appendChild(subtitulo);
+    } catch (error) {
+        console.error('Error al agregar subtítulo:', error);
+    }
+
+    try {
+        const elementosMenu = ['Inicio', 'Productos', 'Mi Carrito'];
+        const menu = document.getElementsByTagName('ul')[0];
+        if (!menu) throw new Error('Elemento no encontrado.');
+
+        elementosMenu.forEach(item => {
+            const li = document.createElement('li');
+            const link = document.createElement('a');
+
+            if (item === 'Mi Carrito') {
+                link.href = 'carrito.html';
+                link.innerHTML = `
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="carritoCantidad" class="carrito-cantidad">0</span>
+                `;
+            } else {
+                link.href = 'index.html';
+                link.textContent = item;
+            }
+
+            li.appendChild(link);
+            menu.appendChild(li);
+        });
+    } catch (error) {
+        console.error('Error de menú:', error);
+    }
+
     const itemsCarrito = document.getElementById('itemsCarrito');
     const precioTotalElemento = document.getElementById('precioTotal');
     const botonVaciar = document.getElementById('vaciarCarrito');
